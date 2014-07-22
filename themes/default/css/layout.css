@@ -1,0 +1,47 @@
+﻿#body{
+	overflow:hidden;	/* 控制溢出高度不可见 */
+	padding-left:200px;
+	padding-right:190px;	/* 如果让右边侧栏不可见，则删除此项 */
+}
+#content,#outline,#sidebar{
+	float:left;
+	position: relative;
+}
+#content{
+	width:100%;
+	padding:10px 20px;
+	background-color:#ccd;
+}
+#outline{
+	width:180px;
+	padding:10px 10px;
+	margin-left:-100%;
+	right:240px;
+	background-color:#ddc;
+}
+#sidebar{
+	width:130px;
+	padding:10px 10px;
+	margin-right:-190px;
+	background-color:#cdd;
+}
+#footer{
+	clear:both;
+	padding:10px;
+	text-align:center;
+	border:1px solid green;
+	background-color:greenYellow;
+}
+#header{
+	border:1px solid maroon;
+	background-color:#fc3;
+}
+
+/* 以下代码必须放在最后定义 */
+#content,#outline,#sidebar{
+	padding-bottom:32767em;
+	margin-bottom:-32767em;
+}
+#container{
+	min-width:640px
+}

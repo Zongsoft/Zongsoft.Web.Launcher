@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" ClientIDMode="Static" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="container">
+		<div id="header">
+		<asp:ContentPlaceHolder ID="HeaderPlaceHolder" runat="server">
+			<div id="banner">
+				<asp:ContentPlaceHolder id="BannerPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+			</div>
+
+			<div id="menubar">
+				<asp:ContentPlaceHolder id="MenubarPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+			</div>
+
+			<div id="express">
+				<asp:ContentPlaceHolder ID="ExpressPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+			</div>
+		</asp:ContentPlaceHolder>
+		</div>
+
+		<div id="body">
+			<asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+				<div id="content">
+					<div id="sitemap">
+						<asp:ContentPlaceHolder ID="SitemapPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+					</div>
+
+					<asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+				</div>
+
+				<div id="outline">
+					<asp:ContentPlaceHolder ID="OutlinePlaceHolder" runat="server"></asp:ContentPlaceHolder>
+				</div>
+
+				<div id="sidebar">
+					<asp:ContentPlaceHolder ID="SidebarPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+				</div>
+			</asp:ContentPlaceHolder>
+		</div>
+
+		<div id="footer">
+			<asp:ContentPlaceHolder ID="FooterPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+		</div>
+    </div>
+</body>
+</html>
