@@ -16,6 +16,10 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -77,11 +81,11 @@
     <Reference Include="Zongsoft.Plugins">
       <HintPath>..\Zongsoft.Plugins\bin\Debug\Zongsoft.Plugins.dll</HintPath>
     </Reference>
-    <Reference Include="Zongsoft.Plugins.Web">
-      <HintPath>..\Zongsoft.Plugins.Web\bin\Debug\Zongsoft.Plugins.Web.dll</HintPath>
-    </Reference>
     <Reference Include="Zongsoft.Web">
       <HintPath>..\Zongsoft.Web\bin\Debug\Zongsoft.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Zongsoft.Web.Plugins">
+      <HintPath>..\Zongsoft.Web.Plugins\bin\Debug\Zongsoft.Web.Plugins.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -11,7 +11,7 @@ namespace Zongsoft.Web.Launcher
 	{
 		protected void Application_Start()
 		{
-			Zongsoft.Plugins.Application.Start(Zongsoft.Plugins.Web.ApplicationContext.Current, null);
+			Zongsoft.Plugins.Application.Start(Zongsoft.Web.Plugins.ApplicationContext.Current, null);
 		}
 	}
 }
