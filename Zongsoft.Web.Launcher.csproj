@@ -46,7 +46,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\ASP.NET MVC 4\System.Net.Http.dll</HintPath>
@@ -81,7 +80,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="Zongsoft.CoreLibrary">
       <HintPath>..\Zongsoft.CoreLibrary\bin\Debug\Zongsoft.CoreLibrary.dll</HintPath>
     </Reference>
@@ -123,11 +121,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\Zongsoft.Plugins\Main.plugin">
+      <Link>plugins\Main.plugin</Link>
+    </Content>
+    <Content Include="..\Zongsoft.Web.Plugins\Web.plugin">
+      <Link>plugins\Web.plugin</Link>
+    </Content>
     <None Include="Web.option" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="views\site.master" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -142,11 +147,12 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>36805</DevelopmentServerPort>
+          <DevelopmentServerPort>8088</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:88</IISUrl>
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
