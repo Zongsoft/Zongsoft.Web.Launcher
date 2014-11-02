@@ -6,6 +6,9 @@
 *.user
 *.sln.docstates
 
+# Plugins
+[Pp]lugins/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
