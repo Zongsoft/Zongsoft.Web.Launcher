@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Title="主页" MasterPageFile="~/views/site.master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Language="C#" Title="主页" MasterPageFile="site.master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <h2><%: ViewData["Message"] %></h2>
