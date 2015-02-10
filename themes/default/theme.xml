@@ -9,7 +9,7 @@
 	</component>
 
 	<component name="layout">
-		<file name="css/reset.css" />
+		<file name="css/normalize.css" />
 		<file name="css/layout.css" />
 	</component>
 
