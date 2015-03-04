@@ -81,16 +81,16 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="Zongsoft.CoreLibrary">
-      <HintPath>..\Zongsoft.CoreLibrary\bin\$(Configuration)\Zongsoft.CoreLibrary.dll</HintPath>
+      <HintPath>..\Zongsoft.CoreLibrary\src\bin\$(Configuration)\Zongsoft.CoreLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Zongsoft.Plugins">
-      <HintPath>..\Zongsoft.Plugins\bin\$(Configuration)\Zongsoft.Plugins.dll</HintPath>
+      <HintPath>..\Zongsoft.Plugins\src\bin\$(Configuration)\Zongsoft.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Zongsoft.Web">
-      <HintPath>..\Zongsoft.Web\bin\$(Configuration)\Zongsoft.Web.dll</HintPath>
+      <HintPath>..\Zongsoft.Web\src\bin\$(Configuration)\Zongsoft.Web.dll</HintPath>
     </Reference>
     <Reference Include="Zongsoft.Web.Plugins">
-      <HintPath>..\Zongsoft.Web.Plugins\bin\$(Configuration)\Zongsoft.Web.Plugins.dll</HintPath>
+      <HintPath>..\Zongsoft.Web.Plugins\src\bin\$(Configuration)\Zongsoft.Web.Plugins.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
