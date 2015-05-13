@@ -21,7 +21,14 @@ namespace Zongsoft.Web.Launcher
 
 		private void Application_Started(object sender, Zongsoft.Plugins.ApplicationEventArgs e)
 		{
+			//将应用上下文对象保存到ASP.NET的全局应用缓存容器中
 			Application["ApplicationContext"] = Zongsoft.Plugins.Application.Context;
+
+			//注册主页的控制器
+			Zongsoft.Plugins.Application.Context.PluginContext.PluginTree.Mount("/Workspace/Controllers/Home", new Func<IController>(() => new DefaultController()));
+
+			//注销插件应用的启动完成事件的通知
+			Zongsoft.Plugins.Application.Started -= Application_Started;
 		}
 	}
 }
