@@ -27,6 +27,9 @@ namespace Zongsoft.Web.Launcher
 			//注册主页的控制器
 			Zongsoft.Plugins.Application.Context.PluginContext.PluginTree.Mount("/Workspace/Controllers/Home", new Func<IController>(() => new DefaultController()));
 
+			//卸载主题表单构件(根据需要来决定是否在所有页面中呈现主题选择框)
+			//context.PluginContext.PluginTree.Unmount(PluginPath.Combine(context.PluginContext.Settings.WorkbenchPath, "__ThemeForm__"));
+
 			//注销插件应用的启动完成事件的通知
 			Zongsoft.Plugins.Application.Started -= Application_Started;
 		}
