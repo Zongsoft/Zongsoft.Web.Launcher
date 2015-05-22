@@ -11,7 +11,8 @@ namespace Zongsoft.Web.Launcher
 	{
 		public ActionResult Index()
 		{
-			ViewData["Message"] = "Welcome to ASP.NET MVC on Zongsoft.Plugins™";
+			this.ViewData["Now"] = DateTime.Now;
+			this.ViewData["Message"] = "Welcome to ASP.NET MVC on Zongsoft.Plugins™";
 
 			return View();
 		}
