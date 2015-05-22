@@ -30,7 +30,7 @@ namespace Zongsoft.Web.Launcher
 			context.PluginContext.PluginTree.Mount("/Workspace/Controllers/Home", new Func<IController>(() => new DefaultController()));
 
 			//卸载主题表单构件
-			context.PluginContext.PluginTree.Unmount(PluginPath.Combine(context.PluginContext.Settings.WorkbenchPath, "__ThemeForm__"));
+			context.PluginContext.PluginTree.Unmount(Zongsoft.Plugins.PluginPath.Combine(context.PluginContext.Settings.WorkbenchPath, "__ThemeForm__"));
 
 			//注销插件应用的启动完成事件的通知
 			Zongsoft.Plugins.Application.Started -= Application_Started;
