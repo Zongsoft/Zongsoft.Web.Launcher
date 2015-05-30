@@ -69,11 +69,15 @@
 
 	<hr />
 
-	<zs:Grid DataKeys="Id" DataSource="${Model}" runat="server">
+	<zs:Grid ID="dataGrid" DataKeys="Id" border="1" DataSource="${Model}" runat="server">
 		<Columns>
 			<zs:GridTemplateColumn Name="Index" Alignment="Center" Title="序号">
 				<Content>
-					<zs:Literal Text="${Index}" runat="server" />
+					<zs:Literal Text="${Index}" runat="server">
+							<zs:Button Value="${DataItem.Id}" runat="server">
+								<zs:Literal Text="${DataItem.Name}" runat="server" />
+							</zs:Button>
+					</zs:Literal>
 				</Content>
 			</zs:GridTemplateColumn>
 
@@ -89,13 +93,25 @@
 
 		<FooterTemplate>
 			<tr>
-				<td>a</td>
-				<td>b</td>
-				<td>c</td>
-				<td>d</td>
+				<th>a</th>
+				<th>b</th>
+				<th>c</th>
+				<th>d</th>
+				<th>e</th>
 			</tr>
 		</FooterTemplate>
 	</zs:Grid>
+
+	<hr />
+
+	<zs:ListView ID="listView" ListType="OrderedList" DataSource="${Model}" runat="server">
+		<ItemTemplate>
+			<zs:Literal TagName="span" Text="${Index}" runat="server" />
+			<zs:TextBox Text="${DataItem.Id}" runat="server" />
+			<zs:TextBox Text="${DataItem.Name}" runat="server" />
+			<zs:TextBox Text="${DataItem.Birthdate:D}" runat="server" />
+		</ItemTemplate>
+	</zs:ListView>
 
 	<hr />
 
