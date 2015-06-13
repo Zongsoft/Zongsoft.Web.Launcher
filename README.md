@@ -5,4 +5,4 @@
 
 ## 关于运行
 
-编译成功后，请首先执行 plugins 文件夹中的 `Update.bat(Windows)` 或 `update.sh(Linux)` 脚本文件。该Shell脚本会将 `/Zongsoft.Plugins/Main.plugin` 和 `/Zongsoft.Web.Plugins/Web.plugin` 两个插件文件复制到本项目的 plugins 目录中，以及将 `/Zongsoft.Web.Plugins/Mvc/Views` 目录中的Web页面文件复制到 plugins/views 目录中。因此，如果上述目录中的源文件发生了改变，可根据需要重新执行 `update.bat` 或 `update.sh` 脚本文件以获取最新版本。
+本项目定义了编译前事件，当开始编译时会自动执行项目目录中的 `deploy-debug.bat` 或 `deploy-release.bat` 脚本以部署相关插件、配置以及试图等文件，更多关于部署的信息请参考：Zongsoft.Utilities.Deployer 项目说明。
