@@ -26,33 +26,16 @@
 				<zs:NumericBox ID="txtNumber" Text="${ViewData[Random]}" runat="server" />
 				<zs:InputBox ID="txtColor" type="Color" runat="server" />
 
-				<zs:LayoutPanelCell ID="CellID" FluidCellSettings-Flex="6" runat="server">
+				<zs:LayoutFluidCell runat="server">
 					<zs:CheckBox ID="chk1" CssClass=":field-inline" Label="我是一个复选框" Checked="false" runat="server" />
 
 					<zs:CheckBox Name="RadioX" Label="我是单选框 #1" Checked="false" InputType="Radio" runat="server" />
 					<zs:CheckBox Name="RadioX" Label="我是单选框 #2" Checked="false" InputType="Radio" runat="server" />
 					<zs:CheckBox Name="RadioX" Label="我是单选框 #3" Checked="false" InputType="Radio" runat="server" />
-				</zs:LayoutPanelCell>
+				</zs:LayoutFluidCell>
 			</zs:LayoutPanel>
 		</BodyTemplate>
 	</zs:Widget>
-
-	<hr />
-
-	<h3>手动添加(Toggle 控件)</h3>
-	<zs:Toggle ID="Gender1" Title="性别" CssClass=":inline" Type="Single" runat="server">
-		<Items>
-			<zs:ToggleItem Text="男" Value="Male" Checked="true" />
-			<zs:ToggleItem Text="女" Value="Female" />
-		</Items>
-	</zs:Toggle>
-
-	<hr />
-
-	<h3>通过数据绑定(Toggle 控件)</h3>
-	<zs:Toggle Name="Gender2" Title="性别" CssClass=":inline" Type="Single" runat="server" DataSource="${ViewData[Genders]}">
-		<Binding TextMember="Description" ValueMember="Value" />
-	</zs:Toggle>
 
 	<hr />
 
