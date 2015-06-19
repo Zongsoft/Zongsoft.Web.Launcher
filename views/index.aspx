@@ -18,7 +18,7 @@
 
 			<hr />
 
-			<zs:ImageBox ImageUrl="~/images/photo.png" runat="server" />
+			<zs:ImageBox NavigateUrl="~/article/${ViewData[Now]:yyyy/MM/dd}" ImageUrl="~/images/${ViewData[Random]}.png" runat="server" />
 
 			<zs:LayoutPanel LayoutMode="Fluid" LayoutColumnCount="2" runat="server">
 				<zs:TextBox ID="txt1" CssClass=":MyTextBox" Visible="true" Enabled="false" Label="消息文本：" Text="${ViewData[Message]}" data-tags="a, b, c ${ViewData[Message]}" runat="server" />
