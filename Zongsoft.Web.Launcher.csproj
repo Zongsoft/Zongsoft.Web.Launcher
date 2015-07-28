@@ -138,7 +138,9 @@
       <Link>plugins\Web.plugin</Link>
     </Content>
     <Content Include="packages.config" />
-    <None Include="Web.option" />
+    <None Include="Web.option">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="views\site.master" />
