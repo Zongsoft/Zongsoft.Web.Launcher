@@ -15,6 +15,7 @@ namespace Zongsoft.Web.Launcher
 			this.ViewData["Random"] = Zongsoft.Common.RandomGenerator.GenerateInt32();
 			this.ViewData["Message"] = "Welcome to ASP.NET MVC on Zongsoft.Plugins™";
 			this.ViewData["Genders"] = Zongsoft.Common.EnumUtility.GetEnumEntries(typeof(Gender), false);
+			this.ViewData["PluginTree"] = Zongsoft.Plugins.Application.Context.PluginContext.PluginTree;
 
 			var people = new Person[]
 			{

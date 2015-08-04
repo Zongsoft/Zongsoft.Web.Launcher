@@ -1,5 +1,33 @@
 ﻿<%@ Page Language="C#" Title="主页" MasterPageFile="site.master" Inherits="System.Web.Mvc.ViewPage" %>
 
+<asp:Content ContentPlaceHolderID="OutlinePlaceHolder" runat="server">
+	<h2>插件树</h2>
+
+	<zs:TreeView ID="PluginTree" runat="server"
+		CssClass="atm ui list left rail"
+		ItemCssClass="item"
+		LoadingPath="root"
+		ListCssClass="list"
+		RenderMode="List"
+		DataSource="${ViewData['PluginTree'].RootNode.Children}"
+		DataPropertyName="Children">
+		<Nodes>
+			<zs:TreeViewNode Name="root" Text="根节点" NavigateUrl="#" NavigateCssClass="content" />
+		</Nodes>
+
+		<NodeTemplate>
+			<div class="content">
+				<zs:Literal TagName="abbr" title="${DataItem.FullPath}" Text="${DataItem.Name}" runat="server" />
+				<% if(DataBinder.Eval(this.GetDataContext(), "NodeType").ToString() == "Builtin") { %>
+					(<zs:Literal TagName="span" style="color: blue;" Text="${DataItem.NodeType}" runat="server" />)
+				<% } else { %>
+					(<zs:Literal TagName="span" style="color: red;" Text="${DataItem.NodeType}" runat="server" />)
+				<% } %>
+			</div>
+		</NodeTemplate>
+	</zs:TreeView>
+</asp:Content>
+
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <h2><%: ViewData["Message"] %></h2>
     <p>
