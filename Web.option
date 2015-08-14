@@ -3,6 +3,7 @@
 <options>
 	<declarations>
 		<declaration name="logger" type="Zongsoft.Diagnostics.Configuration.LoggerElement, Zongsoft.CoreLibrary" />
+		<declaration name="authentication" type="Zongsoft.Web.Security.Configuration.AuthenticationElement, Zongsoft.Web" />
 	</declarations>
 
 	<option path="/">
@@ -18,5 +19,13 @@
 				<predication minLevel="Warn" />
 			</handler>
 		</logger>
+	</option>
+
+	<option path="/Security">
+		<authentication scene="Web">
+			<scenes>
+				<scene name="Web" loginUrl="/login" defaultUrl="/" />
+			</scenes>
+		</authentication>
 	</option>
 </options>
