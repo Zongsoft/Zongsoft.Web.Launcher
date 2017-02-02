@@ -1,0 +1,18 @@
+[plugins]
+/Zongsoft/Zongsoft.Plugins/Main.plugin
+/Zongsoft/Zongsoft.Web.Plugins/Web.plugin
+
+[plugins views]
+/Zongsoft/Zongsoft.Web.Plugins/src/Views/*
+
+[plugins Zongsoft.Security]
+/Zongsoft/Zongsoft.Security/.deploy
+
+[plugins Zongsoft.Externals Json]
+/Zongsoft/Zongsoft.Externals.Json/.deploy
+
+[plugins Zongsoft.Externals Redis]
+/Zongsoft/Zongsoft.Externals.Redis/.deploy
+
+[plugins Zongsoft.Externals Aliyun]
+/Zongsoft/Zongsoft.Externals.Aliyun/.deploy
