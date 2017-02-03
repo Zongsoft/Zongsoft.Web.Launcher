@@ -5,6 +5,9 @@
 [plugins views]
 /Zongsoft/Zongsoft.Web.Plugins/src/Views/*
 
+[plugins Zongsoft.Commands]
+/Zongsoft/Zongsoft.Commands/.deploy
+
 [plugins Zongsoft.Security]
 /Zongsoft/Zongsoft.Security/.deploy
 
