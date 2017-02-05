@@ -16,6 +16,3 @@
 
 [plugins Zongsoft.Externals Redis]
 /Zongsoft/Zongsoft.Externals.Redis/.deploy
-
-[plugins Zongsoft.Externals Aliyun]
-/Zongsoft/Zongsoft.Externals.Aliyun/.deploy
