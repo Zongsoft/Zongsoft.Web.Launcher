@@ -99,8 +99,8 @@
     <Reference Include="Zongsoft.Web">
       <HintPath>..\Zongsoft.Web\src\bin\$(Configuration)\Zongsoft.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Zongsoft.Web.Plugins">
-      <HintPath>..\Zongsoft.Web.Plugins\src\bin\$(Configuration)\Zongsoft.Web.Plugins.dll</HintPath>
+    <Reference Include="Zongsoft.Plugins.Web">
+      <HintPath>..\Zongsoft.Plugins.Web\src\bin\$(Configuration)\Zongsoft.Plugins.Web.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

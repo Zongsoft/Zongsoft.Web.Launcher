@@ -1,15 +1,16 @@
 [plugins]
 /Zongsoft/Zongsoft.Plugins/Main.plugin
-/Zongsoft/Zongsoft.Web.Plugins/Web.plugin
+/Zongsoft/Zongsoft.Plugins.Web/Web.plugin
 
 [plugins views]
-/Zongsoft/Zongsoft.Web.Plugins/src/Views/*
+/Zongsoft/Zongsoft.Plugins.Web/src/Views/*
 
 [plugins Zongsoft.Commands]
 /Zongsoft/Zongsoft.Commands/.deploy
 
 [plugins Zongsoft.Security]
 /Zongsoft/Zongsoft.Security/.deploy
+/Zongsoft/Zongsoft.Security.Web/.deploy
 
 [plugins Zongsoft.Externals Json]
 /Zongsoft/Zongsoft.Externals.Json/.deploy
