@@ -27,7 +27,7 @@ namespace Zongsoft.Web.Launcher
 			Application["ApplicationContext"] = context;
 
 			//注册主页的控制器
-			context.PluginContext.PluginTree.Mount("/Workspace/Controllers/Home", new Func<IController>(() => new DefaultController()));
+			context.PluginContext.PluginTree.Mount("/Workspace/Web/Controllers/Home", new Func<IController>(() => new DefaultController()));
 
 			//注销插件应用的启动完成事件的通知
 			Zongsoft.Plugins.Application.Started -= Application_Started;
