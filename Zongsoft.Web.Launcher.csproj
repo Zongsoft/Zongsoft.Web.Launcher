@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -142,6 +143,7 @@
       <Link>plugins\Web.plugin</Link>
     </Content>
     <Content Include="packages.config" />
+    <Content Include="plugins\.plugin" />
     <None Include="Web.option">
       <SubType>Designer</SubType>
     </None>
