@@ -7,8 +7,8 @@
         copyright="Copyright (C) 2011-2018 Zongsoft Corporation. All rights reserved."
         description="Created Date: 2018-06-1 by Popeye Zhong">
 
-	<extension path="/Workspace/Data">
+	<extension path="/Workbench/Data">
 		<!-- 设置宿主程序的默认数据访问器 -->
-		<!-- accessors.default>{path:./DataAccess}</accessors.default -->
+		<!-- Accessors.Default>{path:xxxxx}</Accessors.Default -->
 	</extension>
 </plugin>
