@@ -31,7 +31,7 @@
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <h2><%: ViewData["Message"] %></h2>
     <p>
-        若要了解有关 ASP.NET MVC 的更多信息，请访问 <a href="http://asp.net/mvc" title="ASP.NET MVC 网站">http://asp.net/mvc</a>。
+        若要了解有关 Zongsoft 的更多信息，请访问 <a href="http://zongsoft.com" title="Zongsoft" target="zongsoft">http://zongsoft.com</a>。
     </p>
 
 	<zs:Widget ID="Inputs" Title="输入框" Description="描述文本" Icon="Edit" runat="server">
