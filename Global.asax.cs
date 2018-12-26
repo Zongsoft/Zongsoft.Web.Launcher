@@ -19,7 +19,7 @@ namespace Zongsoft.Web.Launcher
 			Zongsoft.Plugins.Application.Exit();
 		}
 
-		private void Application_Started(object sender, Zongsoft.Plugins.ApplicationEventArgs e)
+		private void Application_Started(object sender, EventArgs e)
 		{
 			var context = Zongsoft.Plugins.Application.Context;
 
