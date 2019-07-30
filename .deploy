@@ -5,23 +5,23 @@
 [plugins views]
 /Zongsoft/Zongsoft.Plugins.Web/src/Views/*
 
-[plugins Zongsoft.Data]
+[plugins Zongsoft Data]
 /Zongsoft/Zongsoft.Data/.deploy
 /Zongsoft/Zongsoft.Data/drivers/mssql.deploy
 /Zongsoft/Zongsoft.Data/drivers/mysql.deploy
 /Zongsoft/Zongsoft.Data/drivers/oracle.deploy
 /Zongsoft/Zongsoft.Data/drivers/postgresql.deploy
 
-[plugins Zongsoft.Community]
+[plugins Zongsoft Community]
 /Zongsoft/Zongsoft.Community/src/.deploy
 /Zongsoft/Zongsoft.Community/src/api/.deploy
 
-[plugins Zongsoft.Security]
+[plugins Zongsoft Security]
 /Zongsoft/Zongsoft.Security/src/.deploy
 /Zongsoft/Zongsoft.Security/api/.deploy
 
-[plugins Zongsoft.Externals Json]
+[plugins Zongsoft Externals Json]
 /Zongsoft/Zongsoft.Externals.Json/.deploy
 
-[plugins Zongsoft.Externals Redis]
+[plugins Zongsoft Externals Redis]
 /Zongsoft/Zongsoft.Externals.Redis/.deploy
