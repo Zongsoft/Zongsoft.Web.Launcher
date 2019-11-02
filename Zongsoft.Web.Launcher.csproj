@@ -119,7 +119,6 @@
       <Link>plugins\Web.plugin</Link>
     </Content>
     <Content Include="packages.config" />
-    <Content Include="plugins\.plugin" />
     <None Include="Web.option">
       <SubType>Designer</SubType>
     </None>
