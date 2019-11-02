@@ -7,9 +7,13 @@
 
 [plugins Zongsoft Data]
 /Zongsoft/Zongsoft.Data/.deploy
+[plugins Zongsoft Data mssql]
 /Zongsoft/Zongsoft.Data/drivers/mssql.deploy
+[plugins Zongsoft Data mysql]
 /Zongsoft/Zongsoft.Data/drivers/mysql.deploy
+[plugins Zongsoft Data oracle]
 /Zongsoft/Zongsoft.Data/drivers/oracle.deploy
+[plugins Zongsoft Data postgres]
 /Zongsoft/Zongsoft.Data/drivers/postgres.deploy
 
 [plugins Zongsoft Community]
