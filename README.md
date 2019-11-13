@@ -12,15 +12,11 @@ README: [English](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/
 
 ## 启动
 
-插件应用宿主程序的运行机制：在宿主进程的启动点调用插件应用的启动方法。
-更多插件应用的加载机制、运行原理等信息请参考 [**Zongsoft.Plugins**](https:github.com/Zongsoft/Zongsoft.Plugins) 项目的相关文档。
-
+插件应用宿主程序的运行机制：在宿主进程的启动点调用插件应用的启动方法 _（如下所示）_。
 ```csharp
 /*
- * Global.asax.cs
- * https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/Global.asax.cs
+ * https://github.com/Zongsoft/Zongsoft.Web.Launcher/Global.asax.cs
  */
-
 namespace Zongsoft.Web.Launcher
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -33,12 +29,14 @@ namespace Zongsoft.Web.Launcher
 }
 ```
 
+> 更多插件应用的加载机制、运行原理等信息请参考 [**Zongsoft.Plugins**](https:github.com/Zongsoft/Zongsoft.Plugins) 项目的相关文档。
+
 <a name="files"></a>
 ## 部署
 
 ### 部署文件
 
-项目根目录的 [`.deploy`](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/.deploy) 文件是一个 `INI` 格式的部署文件，它定义了需要将哪些源文件拷贝到本项目的对应目录中，供 [Zongsoft.Utilities.Deployer](https://github.com/Zongsoft/Zongsoft.Utilities.Deployer) 部署工具解析使用。
+项目根目录的 [`.deploy`](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/.deploy) 文件是一个 `INI` 格式的部署文件，它定义了需要将哪些源文件拷贝到本项目的相应目录中，供 [Zongsoft.Utilities.Deployer](https://github.com/Zongsoft/Zongsoft.Utilities.Deployer) 部署工具解析使用。
 
 > 提示：可以参考 [Zongsoft.CoreLibrary](https://github.com/Zongsoft/Zongsoft.CoreLibrary) 核心库的 `Zongsoft.Options.Profiles` 命名空间了解 `INI` 配置文件的解析。
 
