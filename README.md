@@ -8,22 +8,28 @@ README: [English](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/
 
 这是 [**Zongsoft**](https://github.com/Zongsoft) 插件应用的 **Web** 宿主程序。
 
-这只是一个普通的 ASP.NET Web API 应用程序，在实际生产中应该为你的产品或项目创建自己的 Web 宿主程序（譬如：`{Organization}.Web.Server`），以便增加一些辅助代码和相关资源文件。
+这只是一个普通的 ASP.NET Web API 应用程序，在实际生产中应该为你的产品或项目创建自己的 Web 宿主程序 _（譬如：`{Organization}.Web.Server`）_，以便增加一些辅助代码和其他资源文件。
 
 ## 启动
 
-[**Zongsoft**](https://github.com/Zongsoft) 插件应用宿主程序都是一样的运行机制：在宿主进程的启动点调用插件应用的启动方法。以本 Web 宿主程序为例（[`Global.asax.cs`](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/Global.asax.cs) 文件）。更多插件应用的加载机制、运行原理等信息请参考 [**Zongsoft.Plugins**](https:github.com/Zongsoft/Zongsoft.Plugins) 项目的相关文档。
+插件应用宿主程序的运行机制：在宿主进程的启动点调用插件应用的启动方法。
+更多插件应用的加载机制、运行原理等信息请参考 [**Zongsoft.Plugins**](https:github.com/Zongsoft/Zongsoft.Plugins) 项目的相关文档。
 
 ```csharp
+/*
+ * Global.asax.cs
+ * https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/Global.asax.cs
+ */
+
 namespace Zongsoft.Web.Launcher
 {
-	public class MvcApplication : System.Web.HttpApplication
-	{
-		protected void Application_Start()
-		{
-			Zongsoft.Plugins.Application.Start(Zongsoft.Plugins.Web.ApplicationContext.Current, null);
-		}
-	}
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            Zongsoft.Plugins.Application.Start(Zongsoft.Plugins.Web.ApplicationContext.Current, null);
+        }
+    }
 }
 ```
 
@@ -32,18 +38,18 @@ namespace Zongsoft.Web.Launcher
 
 ### 部署文件
 
-位于项目根目录的 [`.deploy`](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/.deploy) 文件，这是一个 `INI` 格式的配置文件，它定义了需要将哪些源文件拷贝到本项目的特定目录中的文件，由 [Zongsoft.Utilities.Deployer](https://github.com/Zongsoft/Zongsoft.Utilities.Deployer) 部署工具解析使用。
+项目根目录的 [`.deploy`](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/.deploy) 文件是一个 `INI` 格式的部署文件，它定义了需要将哪些源文件拷贝到本项目的对应目录中，供 [Zongsoft.Utilities.Deployer](https://github.com/Zongsoft/Zongsoft.Utilities.Deployer) 部署工具解析使用。
 
 > 提示：可以参考 [Zongsoft.CoreLibrary](https://github.com/Zongsoft/Zongsoft.CoreLibrary) 核心库的 `Zongsoft.Options.Profiles` 命名空间了解 `INI` 配置文件的解析。
 
-#### 部署命令
-执行部署命令文件，即调用 [Zongsoft.Utilities.Deployer](https://github.com/Zongsoft/Zongsoft.Utilities.Deployer) 部署工具进行一系列文件复制。你可以在宿主项目的设置中添加“生成事件(前)”的执行命令（如下所示），以便每次重建自动更新部署：
+### 部署命令
+部署命令即调用 [Zongsoft.Utilities.Deployer](https://github.com/Zongsoft/Zongsoft.Utilities.Deployer) 部署工具进行一系列文件复制。在宿主项目的“设置”-“生成事件(前)”中添加命令行 _（如下所示）_，以便每次重建 _**(Rebuild)**_ 时自动更新部署：
 ```bash
 cd $(ProjectDir)
 $(ProjectDir)\deploy-$(ConfigurationName).bat
 ```
 
-> **注意：** 宿主项目本身没有多少代码，而当宿主项目没有代码变更时，在某些 **V**isual **S**tudio 版本中重新构建就 **不会** 激发“**生成事件**”，因此也就没有执行在项目设置中定义的部署命令，所以这种情况下当插件项目更新后务必手动执行一遍宿主项目根目录中的部署命令以确保更新后的插件被正确复制过来。
+> **注意：** 宿主项目本身没有多少代码，而当宿主项目没有代码变更时，在某些 **V**isual **S**tudio 版本中重新生成项目是 **不会** 激发“**生成事件**”的，因此也就没有执行在项目设置中定义的部署命令，所以这种情况下当一些插件项目编译更新后，务必手动执行一遍宿主项目根目录中的部署命令，以确保更新后的插件被正确复制过来了再运行宿主程序。
 
 - `deploy-debug.bat` 命令文件
 > ```bash
@@ -112,7 +118,7 @@ $(ProjectDir)\deploy-$(ConfigurationName).bat
 
 ### 部署文件
 
-下面是本宿主项目的部署文件 [`.deploy`](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/.deploy) 的内容：
+下面是本宿主项目的 [`.deploy`](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/.deploy) 部署文件的内容：
 
 ```ini
 [plugins]
@@ -145,12 +151,14 @@ $(ProjectDir)\deploy-$(ConfigurationName).bat
 /Zongsoft/Zongsoft.Externals.Redis/.deploy
 ```
 
-对照插件目录结构和部署文件内容，不难发现该部署文件的含义：
+对照插件目录结构和部署文件内容，不难发现部署文件的定义：
 > - **Section** 段（方括号内部）表示目标位置的相对目录，目录层级之间以空格分隔；
-> - **Entry** 条目（方括号后面）表示源文件的路径，如果源文件扩展名为 `.deploy` 则源文件由该源部署文件定义并以此类推。
+> - **Entry** 条目（方括号后面）表示源文件的路径，如果源文件扩展名为 `.deploy` 则表示源文件由该源部署文件定义并以此类推。
 
-> 如果需要部署你自己的插件，建议在宿主程序根目录添加对应的部署文件（譬如：`xxx.deploy`），然后编辑 “`deploy-debug.bat`” 或 “`deploy-release.bat`” 文件，在命令参数部分加上你的部署文件名即可，大致如下所示：<br />
-> `Zongsoft.Utilities.Deployer.exe -edition:Debug ".deploy" "xxx.deploy"`
+> 如果你需要部署自己的插件，建议在宿主程序根目录添加对应的部署文件 _（譬如：`xxx.deploy`）_，然后编辑 “`deploy-debug.bat`” 或 “`deploy-release.bat`” 命令文件，在命令参数部分加上你的部署文件名即可，大致如下所示：
+> ```bash
+> Zongsoft.Utilities.Deployer.exe -edition:Debug ".deploy" "xxx.deploy"
+> ```
 
 
 <a name="other"></a>
