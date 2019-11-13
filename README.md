@@ -10,6 +10,8 @@ README: [English](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/
 
 这只是一个普通的 ASP.NET Web API 应用程序，在实际生产中应该为你的产品或项目创建自己的 Web 宿主程序 _（譬如：`{Organization}.Web.Server`）_，以便增加一些辅助代码和其他资源文件。
 
+
+<a name="bootstrap"></a>
 ## 启动
 
 插件应用宿主程序的运行机制：在宿主进程的启动点调用插件应用的启动方法 _（如下所示）_。
@@ -31,7 +33,7 @@ namespace Zongsoft.Web.Launcher
 
 > 更多插件应用的加载机制、运行原理等信息请参考 [**Zongsoft.Plugins**](https://github.com/Zongsoft/Zongsoft.Plugins) 项目的相关文档。
 
-<a name="files"></a>
+<a name="deploy"></a>
 ## 部署
 
 ### 部署文件
@@ -60,6 +62,7 @@ $(ProjectDir)\deploy-$(ConfigurationName).bat
 > ```
 
 
+<a name="plugin"></a>
 ## 插件
 
 执行部署命令之后，本宿主项目的 `plugins` 目录结构大概如下所示：
@@ -178,7 +181,7 @@ $(ProjectDir)\deploy-$(ConfigurationName).bat
 
 
 <a name="sponsor"></a>
-### 支持赞助
+## 支持赞助
 
 非常期待您的支持与赞助，可以通过下面几种方式为我们提供必要的资金支持：
 
