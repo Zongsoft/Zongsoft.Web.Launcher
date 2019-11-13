@@ -29,7 +29,7 @@ namespace Zongsoft.Web.Launcher
 }
 ```
 
-> 更多插件应用的加载机制、运行原理等信息请参考 [**Zongsoft.Plugins**](https:github.com/Zongsoft/Zongsoft.Plugins) 项目的相关文档。
+> 更多插件应用的加载机制、运行原理等信息请参考 [**Zongsoft.Plugins**](https://github.com/Zongsoft/Zongsoft.Plugins) 项目的相关文档。
 
 <a name="files"></a>
 ## 部署
