@@ -5,6 +5,8 @@
 README: [English](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/README.md) | [简体中文](https://github.com/Zongsoft/Zongsoft.Web.Launcher/blob/master/README-zh_CN.md)
 
 -----
+注：该项目已归档，对应的替代版本请参考：https://github.com/Zongsoft/Framework/blob/master/hosting/web/Zongsoft.Hosting.Web.sln
+-----
 
 这是 [**Zongsoft**](https://github.com/Zongsoft) 插件应用的 **Web** 宿主程序。
 
